@@ -1,0 +1,13 @@
+<div class="row mt-5">
+  <div class="col-6">
+    <button type="button" class="btn btn-primary btn-lg my-2" routerLink='create'>Create Momo</button>
+    <div class="list-group">
+      <a routerLinkActive='active' routerLink='{{momo}}' class="list-group-item list-group-item-action" *ngFor="let momo of momosIndex; let i=index">
+        {{momos[momo].name}}: {{momos[momo].description}}
+      </a>
+    </div>
+  </div>
+  <div class="col-6">
+    <router-outlet></router-outlet>
+  </div>
+</div>
